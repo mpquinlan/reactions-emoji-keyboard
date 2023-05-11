@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRecentPicksPersistence } from 'rn-emoji-keyboard'
+import { useRecentPicksPersistence } from 'pack-reactions'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import EnableRecently from './EnableRecently'
 

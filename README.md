@@ -41,7 +41,7 @@ Check the docs here [Click](https://thewidlarzgroup.github.io/rn-emoji-keyboard/
 ![Preview](/example/assets/preview-small.gif)
 
 ```js
-import EmojiPicker from 'rn-emoji-keyboard'
+import EmojiPicker from 'pack-reactions'
 
 export default function App() {
   const [isOpen, setIsOpen] = React.useState<boolean>(false)

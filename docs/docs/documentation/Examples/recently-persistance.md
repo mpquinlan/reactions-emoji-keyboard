@@ -12,7 +12,7 @@ To preview app with this example, clone [**github repo**](https://github.com/The
 To provide support for persistent storage of recently selected emoji, use `useRecentPicksPersistence` hook
 
 ```tsx
-import { useRecentPicksPersistence } from 'rn-emoji-keyboard'
+import { useRecentPicksPersistence } from 'pack-reactions'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 useRecentPicksPersistence({
