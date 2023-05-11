@@ -12,7 +12,7 @@ To preview app with this example, clone [**github repo**](https://github.com/The
 If you need emoji picker to be a static component, you dont need to pass any additional props to it.
 
 ```jsx
-import { EmojiKeyboard } from 'rn-emoji-keyboard';
+import { EmojiKeyboard } from 'pack-reactions';
 
 const ExampleComponent = () => {
   // ...

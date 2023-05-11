@@ -13,7 +13,7 @@ For more information about avaible props check [**API Reference section**](/docs
 ### Top
 
 ```jsx
-import EmojiPicker from 'rn-emoji-keyboard'
+import EmojiPicker from 'pack-reactions'
 
 const ExampleComponent = () => {
   // ...
@@ -35,7 +35,7 @@ const ExampleComponent = () => {
 ### Bottom
 
 ```jsx
-import EmojiPicker from 'rn-emoji-keyboard'
+import EmojiPicker from 'pack-reactions'
 
 const ExampleComponent = () => {
   // ...

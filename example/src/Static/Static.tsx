@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { EmojiKeyboard } from 'rn-emoji-keyboard'
+import { EmojiKeyboard } from 'pack-reactions'
 import type { EmojiType } from 'src/types'
 
 const Static = () => {

@@ -16,7 +16,7 @@ If you want to add custom translation or want to get more information about tran
 To add translation just import specific language slug and add it to translation props.
 
 ```jsx
-import EmojiPicker, { pl } from 'rn-emoji-keyboard'
+import EmojiPicker, { pl } from 'pack-reactions'
 
 const ExampleComponent = () => {
   // ...
