@@ -13,7 +13,7 @@ The library gives you the possibility to choose from two modes: modal or static.
 To apply the modal mode in your app, use a default import from `rn-emoji-keyboard`
 
 ```ts
-import EmojiKeyboard from 'rn-emoji-keyboard'
+import EmojiKeyboard from 'pack-reactions'
 ```
 
 ## Required

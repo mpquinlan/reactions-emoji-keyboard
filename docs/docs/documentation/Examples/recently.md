@@ -12,7 +12,7 @@ To preview app with this example, clone [**github repo**](https://github.com/The
 To add an extra category with last used emojis, you need to pass `enableRecentlyUsed` props to `EmojiPicker`.
 
 ```jsx
-import EmojiPicker from 'rn-emoji-keyboard'
+import EmojiPicker from 'pack-reactions'
 
 const ExampleComponent = () => {
   // ...

@@ -12,7 +12,7 @@ Async storage? - sure. Backend as store - no problem.
 Choose how you want to handle it, we only require a Promise
 
 ```tsx
-import { useRecentPicksPersistence } from 'rn-emoji-keyboard'
+import { useRecentPicksPersistence } from 'pack-reactions'
 ```
 
 :::info

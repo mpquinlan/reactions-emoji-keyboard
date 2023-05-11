@@ -59,20 +59,20 @@ export const EmojiPicker = ({
         backdropPress={close}
         onRequestClose={onRequestClose || close}>
         <>
-          {expandable && (
-            <Knob
-              height={height}
-              offsetY={offsetY}
-              onClose={onClose}
-              setIsExpanded={setIsExpanded}
-            />
-          )}
           <Animated.View
             style={[
               {
                 height: Animated.add(Animated.subtract(height, offsetY), additionalHeight),
               },
             ]}>
+            {expandable && (
+              <Knob
+                height={height}
+                offsetY={offsetY}
+                onClose={onClose}
+                setIsExpanded={setIsExpanded}
+              />
+            )}
             <EmojiStaticKeyboard />
           </Animated.View>
         </>
