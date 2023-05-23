@@ -109,7 +109,7 @@ export const Categories = (p: Props) => {
   }, [renderList])
 
   return (
-    <View style={[categoryPosition === 'floating' && styles.floating]}>
+    <View style={[categoryPosition === 'floating' && styles.floating, styles.iosShadow]}>
       <View style={getStylesBasedOnPosition()}>
         <FlatList
           data={renderData}
@@ -123,6 +123,7 @@ export const Categories = (p: Props) => {
           ListHeaderComponentStyle={styles.activeIndicatorContainer}
           extraData={activeCategoryIndex}
           contentContainerStyle={{
+            width: '100%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -134,6 +135,15 @@ export const Categories = (p: Props) => {
 }
 
 const styles = StyleSheet.create({
+  iosShadow: {
+    shadowColor: 'rgba(22, 16, 56, 0.07)',
+    shadowOffset: {
+      width: 0,
+      height: -13,
+    },
+    shadowOpacity: 1.0,
+    shadowRadius: 50,
+  },
   floating: {
     position: 'absolute',
     bottom: 20,
