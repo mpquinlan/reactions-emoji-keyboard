@@ -8,7 +8,7 @@ import { defaultTheme } from '../contexts/KeyboardContext'
 
 const CATEGORY_ELEMENT_WIDTH = 37
 
-const Separator = () => <View style={styles.separator} />
+const Separator = () => <View />
 
 type Props = {
   scrollNav?: Animated.Value
@@ -115,6 +115,7 @@ export const Categories = (p: Props) => {
           data={renderData}
           keyExtractor={(item) => item.category}
           renderItem={renderItem}
+          ItemSeparatorComponent={Separator}
           showsHorizontalScrollIndicator={false}
           horizontal={true}
           onScrollToIndexFailed={onCategoryChangeFailed}
@@ -138,6 +139,7 @@ const styles = StyleSheet.create({
   navigation: {
     padding: 3,
     alignItems: 'center',
+    justifyContent: 'space-between',
     borderColor: '#00000011',
   },
   navigationFloating: {
@@ -147,7 +149,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
-    borderTopWidth: 1,
+    borderTopWidth: 0,
   },
   navigationTop: {
     paddingTop: 12,
@@ -159,9 +161,8 @@ const styles = StyleSheet.create({
   separator: {
     width: 1,
     height: 28,
-    backgroundColor: '#fff',
+    backgroundColor: '#00000011',
     marginHorizontal: 4,
-    display: 'none',
   },
   activeIndicator: {
     position: 'absolute',
