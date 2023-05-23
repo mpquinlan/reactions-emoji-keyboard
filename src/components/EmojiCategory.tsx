@@ -143,7 +143,7 @@ export const EmojiCategory = React.memo(
         <FlatList
           data={[...data, ...empty]}
           keyExtractor={keyExtractor}
-          numColumns={numberOfColumns}
+          numColumns={7}
           renderItem={renderItem}
           getItemLayout={getItemLayout}
           onScroll={handleOnScroll}
