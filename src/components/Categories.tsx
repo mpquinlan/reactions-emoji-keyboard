@@ -115,7 +115,6 @@ export const Categories = (p: Props) => {
           data={renderData}
           keyExtractor={(item) => item.category}
           renderItem={renderItem}
-          ItemSeparatorComponent={Separator}
           showsHorizontalScrollIndicator={false}
           horizontal={true}
           onScrollToIndexFailed={onCategoryChangeFailed}
@@ -160,8 +159,9 @@ const styles = StyleSheet.create({
   separator: {
     width: 1,
     height: 28,
-    backgroundColor: '#00000011',
+    backgroundColor: '#fff',
     marginHorizontal: 4,
+    display: 'none',
   },
   activeIndicator: {
     position: 'absolute',
