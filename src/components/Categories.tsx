@@ -122,6 +122,11 @@ export const Categories = (p: Props) => {
           ListHeaderComponent={activeIndicator}
           ListHeaderComponentStyle={styles.activeIndicatorContainer}
           extraData={activeCategoryIndex}
+          contentContainerStyle={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
         />
       </View>
     </View>
