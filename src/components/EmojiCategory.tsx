@@ -105,8 +105,10 @@ export const EmojiCategory = React.memo(
 
         const recentlyUsedEmoji = recentlyUsed?.find(
           (emoji) =>
-            emoji?.key === `${trimmedEmojiName(props.item.name)}/${props.item.emoji}` ||
-            emoji?.name === props.item.name
+            (props.item?.name &&
+              emoji?.key === `${trimmedEmojiName(props.item.name)}/${props.item.emoji}`) ||
+            emoji?.name === props.item?.name ||
+            emoji?.key === props.item?.key
         )
 
         const isSelected = selectedEmojis && selectedEmojis.includes(props.item.name)
