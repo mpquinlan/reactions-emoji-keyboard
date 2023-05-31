@@ -91,7 +91,7 @@ export const EmojiCategory = React.memo(
     )
 
     const trimmedEmojiName = (emoji: string) => {
-      if (emoji.length >= 29) {
+      if (emoji?.length >= 29) {
         const difference = emoji.length - 25
         const emojiName = emoji.substring(0, emoji.length - difference).trim()
         return emojiName
