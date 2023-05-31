@@ -90,10 +90,24 @@ export const EmojiCategory = React.memo(
       [clearEmojiTonesData, generateEmojiTones]
     )
 
+    const trimmedEmojiName = (emoji: string) => {
+      if (emoji.length >= 29) {
+        const difference = emoji.length - 25
+        const emojiName = emoji.substring(0, emoji.length - difference).trim()
+        return emojiName
+      }
+      return emoji
+    }
+
     const renderItem = React.useCallback(
       (props: ListRenderItemInfo<JsonEmoji>) => {
         const recentlyUsed = keyboardState?.recentlyUsed || []
-        const recentlyUsedEmoji = recentlyUsed?.find((emoji) => emoji.name === props.item.name)
+
+        const recentlyUsedEmoji = recentlyUsed?.find(
+          (emoji) =>
+            emoji?.key === `${trimmedEmojiName(props.item.name)}/${props.item.emoji}` ||
+            emoji?.name === props.item.name
+        )
 
         const isSelected = selectedEmojis && selectedEmojis.includes(props.item.name)
 
