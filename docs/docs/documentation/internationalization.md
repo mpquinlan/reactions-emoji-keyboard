@@ -29,7 +29,7 @@ Due to the limited translation possibilities, we only provide a few pre-defined 
 First import lang and use it as `translation` prop.
 
 ```ts
-import { pl } from 'rn-emoji-keyboard'
+import { pl } from 'pack-reactions'
 
 // ...
 

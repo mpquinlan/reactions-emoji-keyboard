@@ -12,7 +12,7 @@ To preview app with this example, clone [**github repo**](https://github.com/The
 If you want to reveal the search bar, used to find specific emoji, just pass `enableSearchBar` to `EmojiPicker`.
 
 ```jsx
-import EmojiPicker from 'rn-emoji-keyboard'
+import EmojiPicker from 'pack-reactions'
 
 const ExampleComponent = () => {
   // ...
