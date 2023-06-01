@@ -103,13 +103,7 @@ export const EmojiCategory = React.memo(
       (props: ListRenderItemInfo<JsonEmoji>) => {
         const recentlyUsed = keyboardState?.recentlyUsed || []
 
-        const recentlyUsedEmoji = recentlyUsed?.find(
-          (emoji) =>
-            (props.item?.name &&
-              emoji?.key === `${trimmedEmojiName(props.item.name)}/${props.item.emoji}`) ||
-            emoji?.name === props.item?.name ||
-            emoji?.key === props.item?.key
-        )
+        const recentlyUsedEmoji = recentlyUsed?.find((emoji) => emoji?.name === props.item?.name)
 
         const isSelected = selectedEmojis && selectedEmojis.includes(props.item.name)
 
