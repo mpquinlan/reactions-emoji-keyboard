@@ -1,8 +1,8 @@
 import { useContext, useCallback } from 'react'
-import { KeyboardContext } from 'src/contexts/KeyboardContext'
-import { useKeyboardStore } from 'src/store/useKeyboardStore'
-import type { JsonEmoji } from 'src/types'
-import { parseEmoji } from 'src/utils/parseEmoji'
+import { KeyboardContext } from '../contexts/KeyboardContext'
+import { useKeyboardStore } from '../store/useKeyboardStore'
+import type { JsonEmoji } from '../types'
+import { parseEmoji } from '../utils/parseEmoji'
 
 export const useSelectExternalEmoji = () => {
   const { onEmojiSelected, clearEmojiTonesData, selectedEmojis } = useContext(KeyboardContext)
