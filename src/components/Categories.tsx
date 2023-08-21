@@ -20,8 +20,6 @@ export const Categories = (p: Props) => {
     onCategoryChangeFailed,
     categoryPosition,
     renderList,
-    setActiveCategoryIndex,
-    clearEmojiTonesData,
     theme,
     styles: themeStyles,
     enableCategoryChangeAnimation,
@@ -29,21 +27,9 @@ export const Categories = (p: Props) => {
   } = React.useContext(KeyboardContext)
 
   const scrollNav = React.useRef(new Animated.Value(0)).current
-  const handleScrollToCategory = React.useCallback(
-    (category: CategoryTypes) => {
-      clearEmojiTonesData()
-      setActiveCategoryIndex(renderList.findIndex((cat) => cat.title === category))
-      setShouldAnimateScroll(enableCategoryChangeAnimation)
-    },
-    [
-      clearEmojiTonesData,
-      setActiveCategoryIndex,
-      renderList,
-      setShouldAnimateScroll,
-      enableCategoryChangeAnimation,
-    ]
-  )
-
+  const handleScrollToCategory = React.useCallback(() => {
+    setShouldAnimateScroll(enableCategoryChangeAnimation)
+  }, [setShouldAnimateScroll, enableCategoryChangeAnimation])
 
   const renderItem = React.useCallback(
     ({ item, index }: { item: CategoryNavigationItem; index: number }) => (
@@ -111,7 +97,7 @@ export const Categories = (p: Props) => {
   }, [renderList])
 
   return (
-    <View style={[categoryPosition === 'floating' && styles.floating]}>
+    <View style={[categoryPosition === 'floating' && styles.floating, { backgroundColor: 'red' }]}>
       <View style={getStylesBasedOnPosition()}>
         <FlatList
           data={renderData}
