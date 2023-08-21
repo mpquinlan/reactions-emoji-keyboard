@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 3,
     borderRadius: 6,
+    backgroundColor: 'red'
   },
   icon: { textAlign: 'center' },
 })
