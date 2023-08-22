@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Animated, FlatList, StyleSheet, View, ViewStyle } from 'react-native'
 import { KeyboardContext } from '../contexts/KeyboardContext'
-import { CATEGORIES_NAVIGATION, CategoryNavigationItem, CategoryTypes } from '../types'
+import { CATEGORIES_NAVIGATION, CategoryNavigationItem } from '../types'
 import { CategoryItem } from './CategoryItem'
 import { exhaustiveTypeCheck } from '../utils/exhaustiveTypeCheck'
 import { defaultTheme } from '../contexts/KeyboardContext'
