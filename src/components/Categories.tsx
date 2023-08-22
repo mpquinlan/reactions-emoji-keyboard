@@ -8,7 +8,7 @@ import { defaultTheme } from '../contexts/KeyboardContext'
 
 const CATEGORY_ELEMENT_WIDTH = 37
 
-const Separator = () => <View style={styles.separator} />
+const Separator = () => <View />
 
 type Props = {
   scrollNav?: Animated.Value
@@ -109,7 +109,7 @@ export const Categories = (p: Props) => {
   }, [renderList])
 
   return (
-    <View style={[categoryPosition === 'floating' && styles.floating]}>
+    <View style={[categoryPosition === 'floating' && styles.floating, styles.iosShadow]}>
       <View style={getStylesBasedOnPosition()}>
         <FlatList
           data={renderData}
@@ -122,6 +122,12 @@ export const Categories = (p: Props) => {
           ListHeaderComponent={activeIndicator}
           ListHeaderComponentStyle={styles.activeIndicatorContainer}
           extraData={activeCategoryIndex}
+          contentContainerStyle={{
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
         />
       </View>
     </View>
@@ -129,6 +135,15 @@ export const Categories = (p: Props) => {
 }
 
 const styles = StyleSheet.create({
+  iosShadow: {
+    shadowColor: 'rgba(22, 16, 56, 0.07)',
+    shadowOffset: {
+      width: 0,
+      height: -13,
+    },
+    shadowOpacity: 1.0,
+    shadowRadius: 50,
+  },
   floating: {
     position: 'absolute',
     bottom: 20,
@@ -139,6 +154,7 @@ const styles = StyleSheet.create({
   navigation: {
     padding: 3,
     alignItems: 'center',
+    justifyContent: 'space-between',
     borderColor: '#00000011',
   },
   navigationFloating: {
@@ -148,7 +164,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
-    borderTopWidth: 1,
+    borderTopWidth: 0,
   },
   navigationTop: {
     paddingTop: 12,
