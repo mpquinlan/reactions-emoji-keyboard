@@ -1,5 +1,5 @@
 import * as React from 'react'
-import type { TextStyle, ViewStyle } from 'react-native'
+import type { TextStyle, ViewStyle, TextInputProps } from 'react-native'
 import en from '../translation/en'
 import {
   CategoryTranslation,
@@ -75,6 +75,7 @@ export type KeyboardProps = {
   enableRecentlyUsed?: boolean
   categoryPosition?: CategoryPosition
   enableSearchBar?: boolean
+  searchBarTextInputProps?: TextInputProps
   categoryOrder?: CategoryTypes[]
   onRequestClose?: () => void
   disableSafeArea?: boolean
@@ -156,6 +157,7 @@ export const defaultKeyboardContext: Required<KeyboardProps> & { theme: Theme; s
   enableRecentlyUsed: false,
   categoryPosition: 'floating',
   enableSearchBar: false,
+  searchBarTextInputProps: {},
   categoryOrder: [...CATEGORIES],
   onRequestClose: () => {},
   disableSafeArea: false,

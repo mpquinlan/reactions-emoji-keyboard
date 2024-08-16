@@ -16,6 +16,7 @@ export const SearchBar = () => {
     enableSearchAnimation,
     setShouldAnimateScroll,
     enableCategoryChangeAnimation,
+    searchBarTextInputProps,
   } = React.useContext(KeyboardContext)
   const inputRef = React.useRef<TextInput>(null)
 
@@ -50,6 +51,7 @@ export const SearchBar = () => {
         { backgroundColor: theme.search.background },
       ]}>
       <TextInput
+        {...searchBarTextInputProps}
         style={[styles.input, themeStyles.searchBar.text, { color: theme.search.text }]}
         value={searchPhrase}
         onChangeText={handleSearch}
